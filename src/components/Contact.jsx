@@ -29,7 +29,7 @@ const Contact = () => {
     <>
       <div
         name="Contact"
-        className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-14"
+        className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-10"
       >
         <h1 className="text-3xl font-bold mb-4">Contact me</h1>
         <span>Fill the below form to connect with me </span>
