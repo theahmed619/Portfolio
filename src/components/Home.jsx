@@ -13,13 +13,9 @@ const Home = () => {
     <>
       <div
         name="Home"
-        className="max-w-screen-2xl container mx-auto px-4 md:px-14 my-40 h-140 md:my-14 "
-        style={{
-          backgroundImage: `url(${pic})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
+        className="max-w-screen-2xl container mx-auto px-4 md:px-14 my-10 h-140 md:my-14 bg-gradient-to-r from-[#250e82] to-[#150a3a] "
+  
+      
       >
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-white-50 via-black-500 to-black-500"></div>
@@ -48,8 +44,7 @@ const Home = () => {
             <br />
             {/* social media icons */}
 
-            <div className="flex flex-col items-center md:flex-row justify-between space-y-6 md:space-y-0 "
-          >
+            <div className="flex flex-col items-center md:flex-row justify-between space-y-6 md:space-y-0 ">
               <div className="  space-y-2 text-black">
                 <h1 className="font-bold text-center ">Contact us</h1>
                 <ul className="flex space-x-5">
@@ -78,16 +73,15 @@ const Home = () => {
                 </div>
               </div>
             </div>
-
           </div>
 
           {/*left*/}
           <div className="md:w-1/2 flex justify-center mt-8 order-1">
-            {/*  <img
+            {/* <img
               src={pic}
-              className="rounded-full md:w-[300px] md:h-[300px]"
+              className="rounded-full md:w-[300px] md:h-[300px] border-none border-0 outline-none"
               alt=""
-            />*/}
+            /> */}
           </div>
         </div>
       </div>
