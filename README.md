@@ -3,7 +3,7 @@
 
 <h5>📂 Tech Stack:</h5>
 <ul>
-<li>Frontend: React, Tailwind CSS, HTML, CSS</li>
+<li>Frontend: HTML, CSS, Tailwind CSS, ReactJS</li>
 <li>Icons & Animations: React Icons, React Scroll & more..</li>
 </ul>
 
