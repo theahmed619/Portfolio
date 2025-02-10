@@ -50,7 +50,7 @@ const Home = () => {
                 <h1 className="font-bold text-center ">Contact us</h1>
                 <ul className="flex space-x-5">
                   <li>
-                    <a href="https://github.com/theahmed619" target="_blank">
+                    <a href="https://x.com/theahmedshaikh" target="_blank">
                       <FaTwitter className="  text-3xl cursor-pointer" />
                     </a>
                   </li>
