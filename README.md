@@ -8,3 +8,5 @@
 </ul>
 
 <h5>📸 Preview:</h5>
+![Portfolio Screenshot](assets/cover.png)
+
