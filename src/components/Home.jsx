@@ -8,26 +8,27 @@ import { GrMysql } from "react-icons/gr";
 import { ReactTyped, Typed } from "react-typed";
 import pic from "../img/backpic.png";
 
+import { FaTwitter } from "react-icons/fa";
+
 const Home = () => {
+  <style></style>;
   return (
     <>
       <div
         name="Home"
-        className="max-w-screen-2xl container mx-auto px-4 md:px-14 my-10 h-140 md:my-14 bg-gradient-to-r from-[#250e82] to-[#150a3a] "
-  
-      
+        className="max-w-screen-2xl container mx-auto px-4 md:px-14 my-10 h-140 md:my-14  "
       >
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-white-50 via-black-500 to-black-500"></div>
         <div className="flex flex-col md:flex-row">
           {/*right*/}
-          <div className="md:w-1/2 mt-12 md:mt-24 space-y-2 order-2 md:order-1">
-            <span className="text-3xl text-white">Hello 👋</span>
+          <div className="md:w-2/2 mt-12 md:mt-24 space-y-2 order-2 md:order-1">
+            <span className="text-4xl text-white">Hello 👋</span>
             <div className="flex space-x-1 text-2xl md:text-4xl">
-              <h1 className="text-black font-black">Ahmed here, </h1>
+              <h1 className="text-5xl text-white font-black">Ahmed here, </h1>
               {/* <span >Developer</span> */}
               <ReactTyped
-                className="text-red-700 font-bold"
+                className="text-red-700 font-bold text-5xl"
                 strings={["Developer", "Java Developer"]}
                 typeSpeed={40}
                 backSpeed={50}
@@ -44,10 +45,15 @@ const Home = () => {
             <br />
             {/* social media icons */}
 
-            <div className="flex flex-col items-center md:flex-row justify-between space-y-6 md:space-y-0 ">
-              <div className="  space-y-2 text-black">
+            <div className="flex flex-col items-center md:flex-row justify-around space-y-6 md:space-y-0 ">
+              <div className="  space-y-2  text-yellow-300">
                 <h1 className="font-bold text-center ">Contact us</h1>
                 <ul className="flex space-x-5">
+                  <li>
+                    <a href="https://github.com/theahmed619" target="_blank">
+                      <FaTwitter className="  text-3xl cursor-pointer" />
+                    </a>
+                  </li>
                   <li>
                     <a href="https://github.com/theahmed619" target="_blank">
                       <FaGithub className="  text-3xl cursor-pointer" />
@@ -76,7 +82,7 @@ const Home = () => {
           </div>
 
           {/*left*/}
-          <div className="md:w-1/2 flex justify-center mt-8 order-1">
+          <div className="md:w-1/2 flex justify-center mt-8 order-1 items-center ">
             {/* <img
               src={pic}
               className="rounded-full md:w-[300px] md:h-[300px] border-none border-0 outline-none"

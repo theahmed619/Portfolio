@@ -17,26 +17,23 @@ const Navbar = () => {
     },
     {
       id: 3,
-      text: "Portfolio",
+      text: "Projects",
     },
     {
       id: 4,
-      text: "Experiance",
-    },
-    {
-      id: 5,
       text: "Contact",
     },
   ];
+  <style></style>;
   return (
     <>
-      <div className="max-w-screen-2xl container mx-auto px-4 md:px-20 h-14 shadow-md fixed top-0 left-0 right-0 z-50 bg-white">
+      <div className="max-w-screen-2xl container mx-auto px-4 md:px-20 h-14 shadow-md fixed top-0 left-0 right-0 z-50 bg-blue-950">
         <div className="flex justify-between items-center h-14">
           <div className="flex space-x-2">
-            <img src={pic} className="h-12 w-12 rounded-full"></img>
+            {/* <img src={pic} className="h-12 w-12 rounded-full"></img> */}
             <h1 className="font-semibold text-xl cursor-pointer">
-              Ahmed
-              <p className="text-sm">Web Developer</p>
+              Ahmed Shaikh
+              {/* <p className="text-sm">Web Developer</p> */}
             </h1>
           </div>
 
