@@ -4,7 +4,7 @@
 <h5>📂 Tech Stack:</h5>
 <ul>
 <li>Frontend: React, Tailwind CSS, HTML, CSS</li>
-<li>Icons & Animations: React Icons, Framer Motion</li>
+<li>Icons & Animations: React Icons, React Scroll & more..</li>
 </ul>
 
 <h5>📸 Preview:</h5>
