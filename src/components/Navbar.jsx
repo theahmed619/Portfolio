@@ -65,7 +65,7 @@ const Navbar = () => {
 
         {/*mobile navbar */}
         {menu && (
-          <div className="bg-white ">
+          <div className="bg-white text-black">
             <ul className="md:hidden flex flex-col items-center justify-center h-screen space-y-4 text-xl ">
               {navItems.map(({ id, text }) => (
                 <li
