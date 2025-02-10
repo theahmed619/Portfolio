@@ -32,7 +32,7 @@ const Projects = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3 my-10 text-center">
             {cardItem.map(({ id, logo, name }) => (
               <div
-                className="md:w-[300px] md:h-[300px] border-[2px] rounded-lg shadow-lg p-1 cursor-pointer hover:scale-110 duration-300  "
+                className="md:w-[300px] md:h-[300px] border-[2px] rounded-lg shadow-lg p-1 cursor-pointer hover:scale-110 duration-300   "
                 key={id}
               >
                 <div className="flex justify-center">
@@ -44,14 +44,12 @@ const Projects = () => {
                 </div>
                 <div>
                   <div className="px-2 font-bold text-xl mb-2">{name}</div>
-                  <p className="px-2 text-gray-700">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  </p>
+                  <p className="px-2 text-white">complete projects</p>
                 </div>
 
                 <div className=" px-6 py-4 space-x-3 justify-around">
                   <button className="bg-green-500 hover:bg-green-700 text-white font-bold px-4 py-2 rounded">
-                    Source code
+                    <a href="https://github.com/theahmed619/" target="_blank"> Source code</a>
                   </button>
                 </div>
               </div>
