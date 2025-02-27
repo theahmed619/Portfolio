@@ -1,99 +1,85 @@
 import React from "react";
+import { FaGraduationCap, FaCode, FaDatabase, FaTools } from "react-icons/fa";
 
 const About = () => {
   return (
-    <>
-      <div
-        name="About"
-        className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-20"
-      >
-        <div>
-          <h1 className="text-3xl font-bold mb-5">About</h1>
-          <p>
-            Hello, I'm Ahmed, a passionate Java developer with a strong
-            foundation in Java, Spring, and RESTful APIs. I enjoy solving
-            problems and building efficient software solutions. As a quick
-            learner and team player, I’m eager to grow and contribute in a
-            collaborative environment.
-          </p>
-          <br />
-          <h1 className="text-green-600 font-semibold text-xl">Education</h1>
-          <hr />
+    <section
+      id="About"
+      className="max-w-screen-2xl container mx-auto px-6 md:px-20 my-20 py-16 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 rounded-xl shadow-lg"
+    >
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-green-400 mb-8">About Me</h1>
+        <p className="text-gray-300 leading-relaxed max-w-3xl mx-auto">
+          Hello, I'm <span className="text-blue-400 font-medium">Ahmed</span>, a
+          passionate **Java Developer** specializing in{" "}
+          <span className="text-blue-400">Spring Boot</span>,{" "}
+          <span className="text-blue-400">RESTful APIs</span>, and backend
+          development. I enjoy **building scalable applications**, writing{" "}
+          <span className="text-blue-400">clean code</span>, and solving
+          real-world problems. I thrive in collaborative environments and love
+          working on **impactful projects**.
+        </p>
+      </div>
 
-          <div className="flex justify-between my-2">
-            <div className="flex flex-col">
-              <h1 className="text-2xl">BSc-Information Technology</h1>
-              <p className="">
-                SPDT College <span>(Mumbai University)</span>
-              </p>
-            </div>
-            <div className="flex flex-col">
-              <h1 className="text-2xl">2022-2025</h1>
-              <p className="">9.3/10 CGPA</p>
-            </div>
+      {/* Education Section */}
+      <div className="mt-16">
+        <h2 className="text-2xl font-semibold text-green-500 mb-3">
+          <FaGraduationCap className="inline-block mr-2" /> Education
+        </h2>
+        <hr className="border-gray-700 mb-4" />
+
+        <div className="bg-white/10 backdrop-blur-md p-6 rounded-lg shadow-md flex justify-between items-center">
+          <div>
+            <h3 className="text-xl font-medium text-white">
+              BSc in Information Technology
+            </h3>
+            <p className="text-gray-400">SPDT College, Mumbai University</p>
           </div>
-
-          <br />
-          <br />
-          <h1 className="text-green-600 font-semibold text-xl">Skills</h1>
-          <hr />
-          <p className="my-2">
-            <ul>
-              <li className="">
-                Front-end:{" "}
-                <span  className="text-amber-200">
-                  HTML, CSS, TilwindCSS, Bootstrap, JavaScript, ReactJS
-                </span>
-              </li>
-              <li className="">
-                Back-end: <span  className="text-amber-200">Java, SpringBoot, Hibernate</span>{" "}
-              </li>
-              <li className="">
-                Database: <span  className="text-amber-200">MySQL</span>
-              </li>
-              <li className="">
-                Tools: <span  className="text-amber-200">Git, GitHub, Postman</span>
-              </li>
-            </ul>
-          </p>
-          <br />
-          <br />
-          {/* <h1 className="text-green-600 font-semibold text-xl">
-            Professional Experience
-          </h1>
-          <span>
-            [Job Title], [Company/Organization], [Dates] [Brief description of
-            responsibilities and achievements] [Job Title],
-            [Company/Organization], [Dates] [Brief description of
-            responsibilities and achievements] [Freelance/Contract Work],
-            [Client/Organization], [Dates] [Brief description of projects and
-            contributions]
-          </span>
-          <br />
-          <br />
-          <h1 className="text-green-600 font-semibold text-xl">
-            Achievements & Awards
-          </h1>
-          <span>
-            [Award/Recognition], [Organization/Institution], [Year]
-            [Achievement], [Organization/Platform], [Year]
-          </span>
-          <br />
-          <br />
-          <h1 className="text-green-600 font-semibold text-xl">
-            Mission Statement
-          </h1>
-          <p>
-            My mission is to leverage my skills and creativity to deliver
-            innovative [Your Field] solutions that exceed client expectations
-            and contribute positively to the digital landscape. I am committed
-            to continuous learning and growth, always seeking new challenges and
-            opportunities to expand my horizons.
-          </p> */}
+          <div className="text-right">
+            <h3 className="text-xl font-medium text-white">2022 - 2025</h3>
+            <p className="text-gray-400">CGPA: 9.3 / 10</p>
+          </div>
         </div>
       </div>
-      <hr />
-    </>
+
+      {/* Skills Section */}
+      <div className="mt-16">
+        <h2 className="text-2xl font-semibold text-green-500 mb-3">
+          <FaCode className="inline-block mr-2" /> Technical Skills
+        </h2>
+        <hr className="border-gray-700 mb-4" />
+
+        <ul className="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-300">
+          <li className="flex items-center space-x-2">
+            <FaCode className="text-blue-400" />
+            <span>
+              <span className="font-medium text-blue-400">Front-end:</span>{" "}
+              HTML, CSS, Tailwind CSS, Bootstrap, JavaScript, React.js
+            </span>
+          </li>
+          <li className="flex items-center space-x-2">
+            <FaCode className="text-blue-400" />
+            <span>
+              <span className="font-medium text-blue-400">Back-end:</span> Java,
+              Spring Boot, Hibernate
+            </span>
+          </li>
+          <li className="flex items-center space-x-2">
+            <FaDatabase className="text-blue-400" />
+            <span>
+              <span className="font-medium text-blue-400">Database:</span> MySQL
+            </span>
+          </li>
+          <li className="flex items-center space-x-2">
+            <FaTools className="text-blue-400" />
+            <span>
+              <span className="font-medium text-blue-400">Tools:</span> Git,
+              GitHub, Postman
+            </span>
+          </li>
+        </ul>
+      </div>
+    </section>
   );
 };
 

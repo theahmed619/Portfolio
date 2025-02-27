@@ -1,93 +1,103 @@
-import React, { useState } from "react";
-import pic from "../img/zaemon.jpeg";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-scroll";
 import { MdMenu } from "react-icons/md";
 import { RxCross2 } from "react-icons/rx";
-import { Link } from "react-scroll";
 
 const Navbar = () => {
-  const [menu, setMenu] = useState(false);
-  const navItems = [
-    {
-      id: 1,
-      text: "Home",
-    },
-    {
-      id: 2,
-      text: "About",
-    },
-    {
-      id: 3,
-      text: "Projects",
-    },
-    {
-      id: 4,
-      text: "Contact",
-    },
-  ];
-  <style></style>;
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [activeLink, setActiveLink] = useState("Home");
+
+  const navItems = ["Home", "About", "Projects", "Contact"];
+
+  // Handle scroll event for navbar background
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
-      <div className="max-w-screen-2xl container mx-auto px-4 md:px-20 h-14 shadow-md fixed top-0 left-0 right-0 z-50 bg-blue-950">
-        <div className="flex justify-between items-center h-14">
-          <div className="flex space-x-2">
-            {/* <img src={pic} className="h-12 w-12 rounded-full"></img> */}
-            <h1 className="font-semibold text-xl cursor-pointer">
-              Ahmed Shaikh
-              {/* <p className="text-sm">Web Developer</p> */}
-            </h1>
-          </div>
+      {/* Navbar Container */}
+      <nav
+        className={`fixed top-0 left-0 w-full z-50 backdrop-blur-lg transition-all duration-300 ${
+          scrolled ? "bg-gray-900/90 shadow-lg py-3" : "bg-transparent py-4"
+        }`}
+      >
+        <div className="max-w-screen-2xl mx-auto flex items-center justify-between px-6 md:px-12">
+          {/* Logo */}
+          <h1 className="text-white text-2xl font-bold cursor-pointer">
+            Ahmed Shaikh
+          </h1>
 
-          {/*desktop navbar */}
-          <div>
-            <ul className="hidden md:flex space-x-8 ">
-              {navItems.map(({ id, text }) => (
-                <li
-                  key={id}
-                  className="text-center hover:scale-105 duration-200 cursor-pointer "
+          {/* Desktop Navigation */}
+          <ul className="hidden md:flex space-x-8">
+            {navItems.map((item) => (
+              <li key={item}>
+                <Link
+                  to={item}
+                  smooth={true}
+                  duration={500}
+                  offset={-70}
+                  spy={true}
+                  activeClass="text-green-400 border-b-2 border-green-400 pb-1"
+                  onSetActive={() => setActiveLink(item)}
+                  className={`cursor-pointer text-white font-medium transition-all duration-300 ${
+                    activeLink === item
+                      ? "text-green-400 border-b-2 border-green-400 pb-1"
+                      : "hover:text-green-300"
+                  }`}
                 >
-                  <Link
-                    to={text}
-                    smooth={true}
-                    duration={500}
-                    offset={-70}
-                    activeClass="active"
-                  >
-                    {text}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <div onClick={() => setMenu(!menu)} className="md:hidden">
-              {menu ? <RxCross2 size={24} /> : <MdMenu size={24} />}
-            </div>
-          </div>
+                  {item}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="md:hidden text-white p-2 rounded-lg bg-green-500 hover:bg-green-600 transition-all"
+          >
+            {menuOpen ? <RxCross2 size={26} /> : <MdMenu size={26} />}
+          </button>
         </div>
+      </nav>
 
-        {/*mobile navbar */}
-        {menu && (
-          <div className="bg-white text-black">
-            <ul className="md:hidden flex flex-col items-center justify-center h-screen space-y-4 text-xl ">
-              {navItems.map(({ id, text }) => (
-                <li
-                  key={id}
-                  className="text-center hover:scale-105 duration-200 cursor-pointer  font-semibold "
-                >
-                  <Link
-                    onClick={() => setMenu(!menu)}
-                    to={text}
-                    smooth={true}
-                    duration={500}
-                    offset={-70}
-                    activeClass="active"
-                  >
-                    {text}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
+      {/* Mobile Navigation Menu */}
+      <div
+        className={`fixed inset-0 z-40 bg-gray-900 bg-opacity-95 flex flex-col items-center justify-center transform transition-transform duration-500 ${
+          menuOpen ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
+        <ul className="space-y-8">
+          {navItems.map((item) => (
+            <li key={item}>
+              <Link
+                to={item}
+                smooth={true}
+                duration={500}
+                offset={-70}
+                spy={true}
+                onClick={() => {
+                  setActiveLink(item);
+                  setMenuOpen(false);
+                }}
+                className="text-white text-3xl font-bold cursor-pointer hover:text-green-400 transition-all"
+              >
+                {item}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
+
+      {/* Spacer to prevent content from hiding behind navbar */}
+      <div className="h-16"></div>
     </>
   );
 };
