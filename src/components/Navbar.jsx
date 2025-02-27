@@ -28,7 +28,7 @@ const Navbar = () => {
           scrolled ? "bg-gray-900/90 shadow-lg py-3" : "bg-transparent py-4"
         }`}
       >
-        <div className="max-w-screen-2xl mx-auto flex items-center justify-between px-6 md:px-12">
+        <div className="max-w-screen-2xl mx-auto flex items-center justify-between px-6 md:px-12 ">
           {/* Logo */}
           <h1 className="text-white text-2xl font-bold cursor-pointer">
             Ahmed Shaikh
@@ -97,7 +97,7 @@ const Navbar = () => {
       </div>
 
       {/* Spacer to prevent content from hiding behind navbar */}
-      <div className="h-16"></div>
+      <div className="h-12 "></div>
     </>
   );
 };

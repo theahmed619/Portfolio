@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <section
       id="Home"
-      className="relative flex flex-col items-center justify-center text-center min-h-screen px-6 md:px-16 overflow-hidden"
+      className="relative flex flex-col items-center justify-center text-center min-h-screen px-6 md:px-16 overflow-hidden mt-5"
       style={{
         backgroundImage:
           "linear-gradient(to right bottom, rgba(17, 24, 39, 0.95), rgba(0, 0, 0, 0.98))",
@@ -23,12 +23,12 @@ const Home = () => {
       }}
     >
       {/* Overlay for enhanced contrast */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-900/40 to-purple-900/30 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-900/40 to-purple-900/30 pointer-events-none "></div>
 
       {/* Content Wrapper */}
       <div className="relative z-10 w-full max-w-3xl mx-auto space-y-10">
         {/* Intro Text */}
-        <div className="space-y-4">
+        <div className="space-y-4 mt-5">
           <h2 className="text-xl md:text-2xl text-blue-400 font-medium">
             Hello, I'm
           </h2>
@@ -78,7 +78,7 @@ const Home = () => {
         </div>
 
         {/* Social Media & Skills Section */}
-        <div className="grid md:grid-cols-2 gap-8 pt-8 border-t border-gray-700/30 mt-8 backdrop-blur-sm bg-black/10 p-6 rounded-lg max-w-3xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 pt-8 border-t border-gray-700/30 mt-8 backdrop-blur-sm bg-black/10 p-6 rounded-lg max-w-3xl mx-auto mb-4">
           {/* Social Media Links */}
           <div className="text-white">
             <h3 className="font-bold text-lg mb-3 text-blue-400">
