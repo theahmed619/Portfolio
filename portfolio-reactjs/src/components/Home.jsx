@@ -60,7 +60,7 @@ const Home = () => {
         {/* Unique Call-to-Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
           <a
-            href="img/Ahmed_Java_Developer1.pdf"
+            href="img/Ahmed-Resume.pdf"
             download
             className="flex items-center gap-2 px-7 py-3 bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-white font-semibold rounded-xl transition-all duration-300 text-center shadow-lg shadow-green-500/30"
           >
