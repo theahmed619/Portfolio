@@ -4,8 +4,8 @@ This repository contains two versions of my personal portfolio showcasing my pro
 
 ## 🚀 Live Deployments
 
-* **React.js Portfolio** → [https://ahmed-portfolio-nine.vercel.app/](https://theahmed619.vercel.app/) 
-* **Next.js Portfolio** → [https://portfolio-35ew.vercel.app/](https://ahmedshaikh-portfolio.vercel.app/)
+* **React.js Portfolio** → [https://theahmed619.vercel.app/](https://theahmed619.vercel.app/) 
+* **Next.js Portfolio** → [https://ahmedshaikh-portfolio.vercel.app/](https://ahmedshaikh-portfolio.vercel.app/)
 
 ## 📌 About the Projects
 
