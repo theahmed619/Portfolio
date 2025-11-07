@@ -26,7 +26,7 @@ export const navLinks: NavLink[] = [
 
 export const projectsData: Project[] = [
   {
-    video: "assets/videos/chat-collector-demo.mp4",
+    video: "assets/videos/memehub.mp4",
     title: "MemeHub",
     description:
       "A full-stack MERN AI social app. Features user authentication (JWT), client-side Cloudinary uploads, and a dynamic feed to browse, post, and comment on memes.",
@@ -40,7 +40,7 @@ export const projectsData: Project[] = [
     },
   },
   {
-    video: "assets/videos/magic-bento-demo.mp4",
+    video: "assets/videos/onecart.mp4",
     title: "E-Cart",
     description:
       "A full-stack MERN e-commerce platform. Implements product filtering, a shopping cart, and a full checkout flow. Features Google OAuth and standard email/password authentication.",
@@ -54,7 +54,7 @@ export const projectsData: Project[] = [
     },
   },
   {
-    video: "assets/videos/chat-collector-demo.mp4",
+    video: "assets/videos/chatbot.mp4",
     title: "ChatBot",
     description:
       "A responsive chatbot application built with React and Tailwind. It connects to a Node.js/Express backend which securely queries the Google Gemini API for real-time responses",
@@ -69,7 +69,7 @@ export const projectsData: Project[] = [
   },
 
   {
-    video: "assets/videos/new-project-2-demo.mp4",
+    video: "assets/videos/DevChat-Django.mp4",
     title: "Chat-App",
     description:
       "A real-time chat application built with Python and Django. Uses Django Channels for WebSocket communication and SQLite for message persistence.",
@@ -81,7 +81,7 @@ export const projectsData: Project[] = [
     },
   },
     {
-    video: "assets/videos/new-project-2-demo.mp4",
+    video: "assets/videos/HMS.mp4",
     title: "Hospital Management System",
     description:
       "A full-stack web application built with Java Spring Boot and PostgreSQL. Features server-side rendering with Thymeleaf for managing patient, doctor, and appointment data",
@@ -90,6 +90,24 @@ export const projectsData: Project[] = [
       preview: "#",
       github: "https://github.com/theahmed619/SpringFramework-Lab",
       githubApi: "#",
+    },
+  },
+    {
+    video: 'assets/videos/chat-collector-demo.mp4',
+    title: 'Chat Collector Pro',
+    description:
+      'A comprehensive chat collector application built with React and Node.js, featuring real-time collaboration, project tracking, and team management capabilities.',
+    technologies: [
+      'React.js',
+      'Node.js',
+      'MongoDB',
+      'Socket.io',
+      'Material-UI',
+    ],
+    links: {
+      preview: '#',
+      github: '#',
+      githubApi: '#',
     },
   },
 ] as const;

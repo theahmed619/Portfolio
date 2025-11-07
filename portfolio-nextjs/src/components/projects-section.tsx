@@ -4,10 +4,11 @@ import { useSectionInView } from '@/hooks/use-section-in-view'
 import { projectsData } from '@/lib/data'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { useState } from 'react' // Import useState
+import { useState } from 'react'
 import SectionHeading from './section-heading'
 import { Badge } from './ui/badge'
-import { Button } from './ui/button' // Import the Button component
+import { Button } from './ui/button'
+import { Icons } from '@/components/icons' // 1. Import Icons
 
 const fadeInAnimationVariants = {
   initial: {
@@ -24,20 +25,16 @@ const fadeInAnimationVariants = {
 }
 
 // --- Define our constants ---
-// Number of projects to show initially
 const PROJECTS_TO_SHOW_INITIALLY = 2
-// Number of projects to load when "Load More" is clicked
 const PROJECTS_TO_LOAD = 2
 
 export default function ProjectsSection() {
   const { ref } = useSectionInView('Projects')
 
-  // --- Add state to track visible projects ---
   const [visibleProjects, setVisibleProjects] = useState(
     PROJECTS_TO_SHOW_INITIALLY
   )
 
-  // --- Function to handle loading more projects ---
   const handleLoadMore = () => {
     setVisibleProjects((prev) => prev + PROJECTS_TO_LOAD)
   }
@@ -63,7 +60,6 @@ export default function ProjectsSection() {
         />
       </motion.div>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-        {/* --- Use .slice() to show only the visible projects --- */}
         {projectsData.slice(0, visibleProjects).map((data, index) => (
           <motion.div
             key={data.title}
@@ -74,10 +70,10 @@ export default function ProjectsSection() {
               once: true,
             }}
             custom={index}
-            className="flex flex-col rounded border p-4" // removed cursor-pointer as the video link is the main action
+            className="flex flex-col rounded border p-4"
           >
             <Link
-              href={data.links.github}
+              href={data.links.github} // You can change this to data.links.preview if preferred
               aria-label={data.title}
               target="_blank"
               className="overflow-hidden rounded"
@@ -104,12 +100,29 @@ export default function ProjectsSection() {
                 </Badge>
               ))}
             </div>
+
+            {/* 2. --- ADDED BUTTONS WRAPPER --- */}
+            <div className="mt-4 flex  justify-between">
+              <Button asChild variant="outline" size="sm">
+                <Link href={data.links.github} target="_blank">
+                  <Icons.github className="mr-2 size-4" />
+                  Code
+                </Link>
+              </Button>
+              <Button asChild size="sm">
+                <Link href={data.links.preview} target="_blank">
+                  View
+                  <Icons.arrowRight className="ml-2 size-4" />
+                </Link>
+              </Button>
+            </div>
+            {/* --- END OF ADDED BUTTONS --- */}
+            
           </motion.div>
         ))}
       </div>
 
       {/* --- Add the "Load More" button --- */}
-      {/* It only shows if there are more projects to load */}
       {visibleProjects < projectsData.length && (
         <div className="mt-8 flex justify-center">
           <Button onClick={handleLoadMore} variant="outline" size="lg">

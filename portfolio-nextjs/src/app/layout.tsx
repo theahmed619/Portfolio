@@ -20,7 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={cn('min-h-screen font-sans', fonts)}>
-        <ThemeProvider attribute="class">
+       <ThemeProvider 
+          attribute="class" 
+          defaultTheme="dark" 
+          enableSystem={false}
+        >
           <ActionSectionProvider>{children}</ActionSectionProvider>
            <Toaster richColors position="top-right" />
         </ThemeProvider>
