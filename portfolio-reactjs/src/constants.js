@@ -38,7 +38,7 @@ import webverseLogo from './assets/company_logo/webverse_logo.png';
 import agcLogo from './assets/company_logo/agc_logo.png';
 import newtonschoolLogo from './assets/company_logo/newtonschool_logo.png';
 import devmynt from "./assets/company_logo/devmynt.png"
-import Perceptive_solutions from "./assets/company_logo/Perceptive_solutions.jfif"
+import Perceptive_solutions from "./assets/company_logo/perceptive_solutions.jfif"
 
 // Education Section Logo's
 import glaLogo from './assets/education_logo/gla_logo.png';
