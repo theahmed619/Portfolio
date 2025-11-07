@@ -17,8 +17,14 @@ const Footer = () => {
   };
 
   return (
-    <footer className="text-white py-8 px-[12vw] md:px-[7vw] lg:px-[20vw]">
-      <div className="container mx-auto text-center">
+    <footer 
+      // --- REMOVED vw padding ---
+      className="text-white py-8"
+    >
+      {/* --- NEW WRAPPER --- 
+          Replaced 'container' with the standard max-w-7xl block 
+      */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Name / Logo */}
         <h2 className="text-xl font-semibold text-purple-500">Ahmed Shaikh</h2>
 
@@ -28,7 +34,7 @@ const Footer = () => {
             { name: "About", id: "about" },
             { name: "Skills", id: "skills" },
             { name: "Experience", id: "experience" },
-            { name: "Projects", id: "projects" },
+            { name: "Projects", id: "work" }, // <-- Fixed this ID to match your 'Work' section
             { name: "Education", id: "education" },
           ].map((item, index) => (
             <button
@@ -55,13 +61,15 @@ const Footer = () => {
               icon: <FaLinkedin />,
               link: "https://www.linkedin.com/in/ahmedskh/",
             },
-            {/* {
+            {
+              /* {
               icon: <FaInstagram />,
               link: "https://www.instagram.com/",
             },
             {
             icon: <FaYoutube />, link: "https://www.youtube.com/" 
-            }, */}
+            }, */
+            },
           ].map((item, index) => (
             <a
               key={index}

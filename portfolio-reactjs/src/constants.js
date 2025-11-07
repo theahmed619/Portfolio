@@ -72,7 +72,6 @@ export const SkillsInfo = [
       { name: 'Bootstrap', logo: bootstrapLogo },
       { name: 'JS', logo: javascriptLogo },
       { name: 'React JS', logo: reactjsLogo },
-      { name: 'Next JS', logo: nextjsLogo },
       { name: 'Tailwind CSS', logo: tailwindcssLogo },
       
     
@@ -86,9 +85,9 @@ export const SkillsInfo = [
       { name: 'Springboot', logo: springbootLogo },
       { name: 'Node JS', logo: nodejsLogo },
       { name: 'Express JS', logo: expressjsLogo },
+      { name: 'Next JS', logo: nextjsLogo },
       { name: 'MySQL', logo: mysqlLogo },
       { name: 'MongoDB', logo: mongodbLogo },
-    
       { name: 'PostgreSQL', logo: postgreLogo },
         { name: 'Firebase', logo: firebaseLogo },
     ],
