@@ -34,7 +34,7 @@ export const projectsData: Project[] = [
     "ReactJS", "TailwindCSS", "ExpressJS", "MongoDB", "Cloudinary"
     ],
     links: {
-      preview: "#",
+      preview: "https://memehub-v1.vercel.app/",
       github: "https://github.com/theahmed619/WebDev/tree/main/MERN%20Projects/MemeHub",
       githubApi: "#",
     },
@@ -48,7 +48,7 @@ export const projectsData: Project[] = [
     "React JS", "Node.js", "MongoDB", "Express", "Tailwind CSS"
     ],
     links: {
-      preview: "#",
+      preview: "https://memehub-v1.vercel.app/",
       github: "https://github.com/theahmed619/WebDev/tree/main/MERN%20Projects/e-commerce/oneCart",
       githubApi: "#",
     },
@@ -62,7 +62,7 @@ export const projectsData: Project[] = [
     "React JS", "Express JS",  "Tailwind CSS", "Gemini API"
     ],
     links: {
-      preview: "#",
+      preview: "https://devchat-alri.onrender.com/",
       github: "https://github.com/theahmed619/WebDev/tree/main/MERN%20Projects/chatbot/chatbot-v2",
       githubApi: "#",
     },
@@ -75,7 +75,7 @@ export const projectsData: Project[] = [
       "A real-time chat application built with Python and Django. Uses Django Channels for WebSocket communication and SQLite for message persistence.",
     technologies: ["Python", "Django", "SQLite"],
     links: {
-      preview: "#",
+      preview: "https://devchat-alri.onrender.com/",
       github: "https://github.com/theahmed619/Python-Lab/tree/main/Django/DevChat",
       githubApi: "#",
     },
@@ -87,7 +87,7 @@ export const projectsData: Project[] = [
       "A full-stack web application built with Java Spring Boot and PostgreSQL. Features server-side rendering with Thymeleaf for managing patient, doctor, and appointment data",
     technologies: ["Java", "SpringBoot", "Thymeleaf", "PostgreSQL"],
     links: {
-      preview: "#",
+      preview: "https://hms-3es8.onrender.com/",
       github: "https://github.com/theahmed619/SpringFramework-Lab",
       githubApi: "#",
     },
