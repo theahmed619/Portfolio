@@ -55,13 +55,13 @@ const Footer = () => {
               icon: <FaLinkedin />,
               link: "https://www.linkedin.com/in/ahmedskh/",
             },
-            {
+            {/* {
               icon: <FaInstagram />,
-              link: "https://www.instagram.com/theahmed619",
+              link: "https://www.instagram.com/",
             },
             {
-              /* { icon: <FaYoutube />, link: "https://www.youtube.com/codingmasteryt" }, */
-            },
+            icon: <FaYoutube />, link: "https://www.youtube.com/" 
+            }, */}
           ].map((item, index) => (
             <a
               key={index}
